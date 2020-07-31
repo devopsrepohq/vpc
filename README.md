@@ -19,6 +19,7 @@ You will need the following before utilize this CDK stack:
 - [Node.js](https://cdkworkshop.com/15-prerequisites/300-nodejs.html)
 - [IDE for your programming language](https://cdkworkshop.com/15-prerequisites/400-ide.html)
 - [AWS CDK Tookit](https://cdkworkshop.com/15-prerequisites/500-toolkit.html)
+- [AWS Toolkit VSCode Extension](https://github.com/devopsrepohq/aws-toolkit)
 
 # Stack Explain
 
