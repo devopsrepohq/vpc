@@ -8,7 +8,6 @@ Use this CDK stack to create a standard VPC.
 
 - [x] Deploy a standard VPC with public, private, and isolated subnet.
 - [x] Use multiple AZs deployments for high availability.
-- [x] Use security groups and network ACLs.
 - [x] Use flow logs to capture information about IP traffic going to and from network interfaces in VPC.
 
 # Prerequisites
