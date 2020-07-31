@@ -6,19 +6,12 @@ Use this CDK stack to create a standard VPC.
 
 # Features
 
-<<<<<<< HEAD
 - [x] Deploy a standard VPC with public, private, and isolated subnet.
 - [x] Use multiple Availability Zone deployments for high availability.
 - [x] Use security groups and network ACLs.
 - [x] Use IAM policies to control access.
 - [x] Use Amazon CloudWatch for monitor VPC components and VPN connections.
 - [x] Use flow logs to capture information about IP traffic going to and from network interfaces in VPC.
-=======
-- Deploy a standard VPC with public, private, and isolated subnet.
-
-- [*] Mercury
-- [ ] Mercury
->>>>>>> c3cd9281d28200f121c471cd027bb5009bf352c3
 
 # Prerequisites
 
