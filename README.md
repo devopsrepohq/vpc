@@ -64,6 +64,14 @@ vpc.addFlowLog('FlowLogCloudWatch', {
 });
 ```
 
+Deploy the stack to your aws account.
+
+```
+cdk deploy
+or
+cdk deploy --profile your_profile_name
+```
+
 # Useful commands
 
 ## NPM commands
