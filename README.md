@@ -54,10 +54,10 @@ const vpc = new ec2.Vpc(this, 'MyVpc', {
 });
 ```
 
-- maxAzs - Define the maximum number of AZs to use in this region.
-- natGateways - The number of NAT Gateways/Instances to create.
-- cidr - The CIDR range to use for the VPC, e.g. '10.0.0.0/16'.
-- subnetConfiguration - Configure the subnets to build for each AZ.
+- maxAzs - Define 3 AZs to use in this region.
+- natGateways - Create only 1 NAT Gateways/Instances.
+- cidr - Use '10.0.0.0/16' CIDR range for the VPC.
+- subnetConfiguration - Build the public, private, and isolated subnet for each AZ.
 
 # Useful commands
 
