@@ -8,7 +8,7 @@ Use this CDK stack to create a standard VPC.
 
 - Deploy a standard VPC with public, private, and isolated subnet.
 
-- [ ] Mercury
+- [*] Mercury
 - [ ] Mercury
 
 # Prerequisites
