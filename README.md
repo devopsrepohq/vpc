@@ -88,6 +88,7 @@ cdk deploy --profile your_profile_name
  * `cdk deploy`               Deploys the specified stack(s)
  * `cdk deploy '*'`           Deploys all stacks at once
  * `cdk destroy`              Destroys the specified stack(s)
+ * `cdk destroy '*'`          Destroys all stacks at once
  * `cdk diff`                 Compares the specified stack with the deployed stack or a local CloudFormation template
  * `cdk metadata`             Displays metadata about the specified stack
  * `cdk init`                 Creates a new CDK project in the current directory from a specified template
