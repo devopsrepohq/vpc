@@ -7,7 +7,7 @@ Use this CDK stack to create a standard VPC.
 # Features
 
 - [x] Deploy a standard VPC with public, private, and isolated subnet.
-- [x] Use multiple Availability Zone deployments for high availability.
+- [x] Use multiple AZs deployments for high availability.
 - [x] Use security groups and network ACLs.
 - [x] Use IAM policies to control access.
 - [x] Use Amazon CloudWatch for monitor VPC components and VPN connections.
@@ -23,7 +23,7 @@ You will need the following before utilize this CDK stack:
 - [IDE for your programming language](https://cdkworkshop.com/15-prerequisites/400-ide.html)
 - [AWS CDK Tookit](https://cdkworkshop.com/15-prerequisites/500-toolkit.html)
 
-# Instruction
+# Stack Explain
 
 ## lib/vpc-stack.ts
 
@@ -58,8 +58,6 @@ const vpc = new ec2.Vpc(this, 'MyVpc', {
 - natGateways - The number of NAT Gateways/Instances to create.
 - cidr - The CIDR range to use for the VPC, e.g. '10.0.0.0/16'.
 - subnetConfiguration - Configure the subnets to build for each AZ.
-
-The subnetConfiguration will create three subnets `public`, `private`, and `isolated` in each AZs. So total we will have 9 subnets created in above props.
 
 # Useful commands
 
