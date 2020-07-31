@@ -4,13 +4,13 @@ import * as ec2 from '@aws-cdk/aws-ec2';
 import { IVpc } from '@aws-cdk/aws-ec2';
 
 export class VpcStack extends cdk.Stack {
-  public readonly vpc: IVpc
+  public readonly vpc: IVpc;
 
   constructor(scope: cdk.Construct, id: string, props?: cdk.StackProps) {
     super(scope, id, props);
 
     // Create standard VPC
-    const vpc = new ec2.Vpc(this, 'MyVpc', {
+    const vpc = new ec2.Vpc(this, 'Vpc', {
       maxAzs: 3,
       natGateways: 1,
       cidr: '10.0.0.0/16',
@@ -33,7 +33,12 @@ export class VpcStack extends cdk.Stack {
      ]
     });
 
+    // Create flowlog and log the vpc traffic into cloudwatch
+    vpc.addFlowLog('FlowLogCloudWatch', {
+      trafficType: ec2.FlowLogTrafficType.REJECT     
+    });
+
     // Assign the vpc to class property
-    this.vpc = vpc;
+    this.vpc = vpc;    
   }
 }

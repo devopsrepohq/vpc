@@ -9,8 +9,6 @@ Use this CDK stack to create a standard VPC.
 - [x] Deploy a standard VPC with public, private, and isolated subnet.
 - [x] Use multiple AZs deployments for high availability.
 - [x] Use security groups and network ACLs.
-- [x] Use IAM policies to control access.
-- [x] Use Amazon CloudWatch for monitor VPC components and VPN connections.
 - [x] Use flow logs to capture information about IP traffic going to and from network interfaces in VPC.
 
 # Prerequisites
@@ -58,6 +56,14 @@ const vpc = new ec2.Vpc(this, 'MyVpc', {
 - natGateways - Create only 1 NAT Gateways/Instances.
 - cidr - Use '10.0.0.0/16' CIDR range for the VPC.
 - subnetConfiguration - Build the public, private, and isolated subnet for each AZ.
+
+Create flowlog and log the vpc's reject traffic into cloudwatch
+
+```
+vpc.addFlowLog('FlowLogCloudWatch', {
+  trafficType: ec2.FlowLogTrafficType.REJECT     
+});
+```
 
 # Useful commands
 
