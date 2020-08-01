@@ -4,6 +4,10 @@ Use this CDK stack to create a standard VPC.
 
 ![VPC architecture](https://github.com/devopsrepohq/vpc/blob/master/_docs/vpc.png?raw=true)
 
+# What is it?
+
+Provision a logically isolated section of the AWS cloud where you can launch AWS resources in a virtual network that you define.
+
 # Features
 
 - [x] Deploy a standard VPC with public, private, and isolated subnet.
