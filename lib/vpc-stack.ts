@@ -37,6 +37,6 @@ export class VpcStack extends cdk.Stack {
     vpc.addFlowLog('FlowLog');
 
     // Assign the vpc to class property
-    this.vpc = vpc;    
+    this.vpc = vpc;
   }
 }
