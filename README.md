@@ -1,20 +1,18 @@
-# VPC
-
 Use this CDK stack to create a standard VPC.
 
-![VPC architecture](https://github.com/devopsrepohq/vpc/blob/master/_docs/vpc.png?raw=true)
+![VPC architecture](https://images.prismic.io/devopsrepo/e115c79a-8a7d-460b-b3a1-58d1df2edffc_vpc.png?auto=compress,format)
 
-# What is it?
+## What is it?
 
 Provision a logically isolated section of the AWS cloud where you can launch AWS resources in a virtual network that you define.
 
-# Features
+## Features
 
 - [x] Deploy a standard VPC with public, private, and isolated subnet.
 - [x] Use multiple AZs deployments for high availability.
 - [x] Use flow logs to capture information about IP traffic going to and from network interfaces in VPC.
 
-# Prerequisites
+## Prerequisites
 
 You will need the following before utilize this CDK stack:
 
@@ -25,13 +23,13 @@ You will need the following before utilize this CDK stack:
 - [AWS CDK Tookit](https://cdkworkshop.com/15-prerequisites/500-toolkit.html)
 - [AWS Toolkit VSCode Extension](https://github.com/devopsrepohq/aws-toolkit)
 
-# Stack Explain
+## Stack Explain
 
-## cdk.json
+### cdk.json
 
 Define project-name and env context variables in cdk.json
 
-```
+```json
 {
   "context": {
     "project-name": "container",
@@ -41,11 +39,11 @@ Define project-name and env context variables in cdk.json
 }
 ```
 
-## lib/vpc-stack.ts
+### lib/vpc-stack.ts
 
 Setup standard VPC with public, private, and isolated subnets.
 
-```
+```javascript
 const vpc = new ec2.Vpc(this, 'Vpc', {
   maxAzs: 3,
   natGateways: 1,
@@ -77,27 +75,27 @@ const vpc = new ec2.Vpc(this, 'Vpc', {
 
 Create flowlog and log the vpc traffic into cloudwatch
 
-```
+```javascript
 vpc.addFlowLog('FlowLog');
 ```
 
 Deploy the stack to your aws account.
 
-```
+```bash
 cdk deploy
 or
 cdk deploy --profile your_profile_name
 ```
 
-# Useful commands
+## Useful commands
 
-## NPM commands
+### NPM commands
 
  * `npm run build`   compile typescript to js
  * `npm run watch`   watch for changes and compile
  * `npm run test`    perform the jest unit tests
 
-## Toolkit commands
+### Toolkit commands
 
  * `cdk list (ls)`            Lists the stacks in the app
  * `cdk synthesize (synth)`   Synthesizes and prints the CloudFormation template for the specified stack(s)
@@ -113,7 +111,7 @@ cdk deploy --profile your_profile_name
  * `cdk docs (doc)`           Opens the CDK API reference in your browser
  * `cdk doctor`               Checks your CDK project for potential problems
 
- # Pricing
+## Pricing
 
 As this cdk stack will create NAT Gateway, please refer the following link for pricing
 
